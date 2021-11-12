@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+:root{
+    --pink:#cf988d;
+    --red:#a63f33;
+    --black:#000000;
+    --white:#ffe6e8;
+}
+
+*{
+    font-family: 'Noto Serif', serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    text-transform: capitalize;
+    transition: all .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background:var(--red);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 9%;
+    padding-top: 8rem;
+}
+
+.heading{
+    text-align: center;
+    color:var(--red);
+    font-size: 2.5rem;
+    text-transform: none;
+    font-weight: normal;
+    padding:1rem;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    padding:2rem;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color:var(--red);
+}
+
+header .logo span{
+    color:var(--red);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    margin-left: .7rem;
+    padding:.5rem 2rem;
+    border-radius: .5rem;
+    color:var(--red);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    background: var(--red);
+    color:#fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .sticky{
+    background: #dbaea4;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+#menu{
+    font-size: 3rem;
+    color:var(--red);
+    cursor: pointer;
+    display: none;
+}
+
+.beranda{
+    background:url(img/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.beranda .konten{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.beranda .konten h1{
+    font-size: 4rem;
+    color:var(--red);
+}
+
+.beranda .konten h3{
+    font-size: 3rem;
+    color:var(--red);
+    font-weight: normal;
+}
+
+.beranda .konten .btn{
+    display: inline-block;
+    padding:.5rem 3rem;
+    color:#fff;
+    background:var(--pink);
+    border-radius: .3rem;
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.1);
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.beranda .konten .btn:hover{
+    background:var(--red);
+}
+
+.pencegahan .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pencegahan .box-container .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    margin:1rem;
+    padding:1rem;
+    text-align: center;
+}
+
+.pencegahan .box-container .box .img{
+    height:12rem;
+    padding:1rem;
+}
+
+.pencegahan .box-container .box h3{
+    color:var(--red);
+    font-size: 1.5rem;
+}
+
+.pencegahan .box-container .box p{
+    color:var(--red);
+    font-size: 1rem;
+    padding:1rem;
+}
+
+.pencegahan .box-container .box:hover{
+    box-shadow: 0 5px 1rem rgba(0,0,0,.1);
+}
+
+.gejala{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gejala .konten{
+    flex:1 1 40rem;
+}
+
+.gejala .image{
+    flex:1 1 40rem;
+}
+
+.gejala .image img{
+    width:100%;
+}
+
+.gejala .konten p{
+    font-size: 1.5rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+
+.gejala .konten ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.gejala .konten ul .dua{
+    padding-left: 4.5rem;
+}
+
+.gejala .konten ul li{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color:var(--black);
+    padding: .5rem 0;
+}
+
+.dokter .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dokter .box-container .box{
+    width: 240px;
+    background:#dbaea4;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    margin: 5px;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dokter .box-container .box img{
+    background:#fff;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.dokter .box-container .box-container .box h3{
+    font-size: 15px;
+    margin: 2px 0;
+    color:var(--black)
+}
+
+.dokter .box-container .box span{
+    font-size: 10px;
+    color:var(--red);
+}
+
+.dokter .box-container .box .sosialmedia{
+    position: absolute;
+    top: 5px; right: -50px;
+    transition: .2s;
+}
+
+.dokter .box-container .box:hover .sosialmedia{
+    right:15px;
+}
+
+.dokter .box-container .box .sosialmedia a{
+    border-radius: 5px;
+    background:var(--pink);
+    color:#fff;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+.dokter .box-container .box .sosialmedia a:hover{
+    background:var(--red);
+}
+
+.kontak{
+    justify-content: center;
+    margin: 300px;
+}
+
+.kontak .main{
+    border-radius: 5px;
+    width: 400px;
+    padding: 40px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.kontak .main h2{
+    margin: 0 40px;
+    padding: 15px;
+    color: var(--red);
+    text-align: center;
+    font-weight: bold;
+}
+
+.kontak .main .border{
+    width: 70px;
+    height: 3px;
+    background-color:#a63f33;
+    margin: 1px auto;
+}
+
+.kontak .main input{
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.kontak .main textarea{
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+.kontak .main input,
+.kontak .main textarea{
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+}
+
+.kontak .main textarea{
+    margin-bottom: 20px;
+}
+
+.kontak .main input[type="submit"]{
+    border-bottom: none;
+    cursor: pointer;
+    background: #999;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.kontak .main form div{
+    position: relative;
+}
+
+.kontak .main input[type="submit"]:hover{
+    background: #a63f33;
+}
+
+.footer{
+    background:url(img/bgfooter.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--red);
+    padding:1rem 0;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color:var(--red);
+    padding:.5rem 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    color:var(--red);
+    padding:.5rem 0;
+    display: block;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    padding:2.5rem 1rem;
+    color:var(--red);
+}
+
+.footer .credit a{
+    color:var(--red);
+}
+
+.scroll-top{
+    position: fixed;
+    bottom:2rem; right:1.5rem;
+    z-index: 1000;
+}
+
+.scroll-top img{
+    width:8rem;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    100%, 0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3rem);
+    }
+}
+
+/* media queries */
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991px){
+    
+    section{
+        padding:1rem 3%;
+        padding-top: 8rem;
+    }
+    
+    #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left: 0;
+        width:100%;
+        background:#fff;
+        padding:2rem;
+        border-top: .1rem  solid rgba(0,0,0,.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    header .navbar.nav-toggle{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header .navbar a{
+        display: block;
+        margin:1.5rem 0;
+        font-size: 2rem;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width:100px){
+    html{
+        font-size: 10%;
+    }
+    .beranda .konten h1{
+        font-size: 1rem;
+    }
+    .beranda .konten h3{
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width:100px){
+    .beranda .konten h1{
+        font-size: 1rem;
+    }
+    .beranda .konten h3{
+        font-size: 0.5rem;
+    }
+}
+
+
